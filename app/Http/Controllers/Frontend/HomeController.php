@@ -12,6 +12,6 @@ class HomeController extends Controller
     {
         $data = [];
         $data['products'] = Product::paginate(9);
-        return view('frontend.home', $data);
+        return view('frontend.layouts.home', $data);
     }
 }

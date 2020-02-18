@@ -7,8 +7,8 @@ use App\Http\Controllers\Controller;
 
 class Cart extends Controller
 {
-    public function addToCart()
+    public function addToCart($id)
     {
-        return "a";
+        return $id;
     }
 }
