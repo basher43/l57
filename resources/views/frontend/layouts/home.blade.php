@@ -15,8 +15,9 @@
                             <p class="card-text"><a href="{{route('showProduct', $product->slug)}}">{{$product->title}}</a></p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <form action="{{route('addtocart', $product->id)}}" method="POST">
+                                    <form action="{{route('addtocart')}}" method="POST">
                                         @csrf
+                                        <input type="hidden" name="product_id" value="{{$product->id}}">
                                         <button type="submit" class="btn btn-sm btn-outline-secondary">Add to cart</button>
                                     </form>
                                 </div>
