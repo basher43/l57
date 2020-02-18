@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::group(['namespace'=>'Frontend'], function(){
+    Route::get('/', 'HomeController@showHomePage')->name('frontend.home');
+    Route::post('/cart/{id}', 'Cart@addToCart')->name('addtocart');
+    Route::get('/product/{id}', 'ProductController@showProductDetails')->name('showProduct');
+
 });
