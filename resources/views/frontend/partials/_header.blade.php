@@ -3,8 +3,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-md-7 py-4">
-                    <h4 class="text-white">About</h4>
-                    <p class="text-muted">Basher43 Ecommerce Project Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur debitis ducimus eum facere natus necessitatibus non quaerat qui tempore? Alias, aspernatur, consequuntur doloribus dolorum ducimus esse est illum inventore libero, nostrum obcaecati perspiciatis reprehenderit sit </p>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Categorises</h4>
+                        <ul class="list-unstyled">
+                            @foreach($categories as $category)
+                                <li><a href="{{$category->slug}}">{{$category->name}}</a></li>
+                                @endforeach
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-sm-4 offset-md-1 py-4">
                     <h4 class="text-white">Menu</h4>
